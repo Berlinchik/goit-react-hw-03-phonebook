@@ -1,4 +1,5 @@
 import s from './ContactList.module.scss';
+import PropTypes from 'prop-types';
 
 const ContactList = ({ items, onDelete }) => {
   return items.length ? (
@@ -18,3 +19,7 @@ const ContactList = ({ items, onDelete }) => {
 };
 
 export default ContactList;
+ContactList.propTypes = {
+  items: PropTypes.array.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
